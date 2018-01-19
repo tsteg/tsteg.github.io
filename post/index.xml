@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Anecdotal Evidence</title>
-    <link>https://tsteg.github.io/post/</link>
+    <link>https://tsteggall.github.io/post/</link>
     <description>Recent content in Posts on Anecdotal Evidence</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2018, Tim Steggall; all rights reserved.</copyright>
     <lastBuildDate>Thu, 18 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://tsteg.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tsteggall.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>hello-world</title>
-      <link>https://tsteg.github.io/post/hello-world/</link>
+      <link>https://tsteggall.github.io/post/hello-world/</link>
       <pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://tsteg.github.io/post/hello-world/</guid>
+      <guid>https://tsteggall.github.io/post/hello-world/</guid>
       <description>Test Post
 Hello World</description>
     </item>
     
     <item>
       <title>Accumsan Ultricies Turpis?</title>
-      <link>https://tsteg.github.io/post/accumsan-ultricies-turpis/</link>
+      <link>https://tsteggall.github.io/post/accumsan-ultricies-turpis/</link>
       <pubDate>Wed, 23 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://tsteg.github.io/post/accumsan-ultricies-turpis/</guid>
+      <guid>https://tsteggall.github.io/post/accumsan-ultricies-turpis/</guid>
       <description>Image via CrunchBase   Volutpat vel consequat eget. Et egestas sit amet velit.
  Duis turpis libero, pretium et mauris eu, volutpat mollis tellus. Donec malesuada vel augue sit amet imperdiet. Vestibulum maximus et leo non laoreet.
  Maecenas erat lacus, volutpat vel consequat eget, egestas sit amet velit. Mauris a velit imperdiet, dictum leo sit amet, tempor tellus. Vestibulum a congue tortor. Quisque luctus tincidunt neque ornare cursus.</description>
@@ -35,20 +35,20 @@ Hello World</description>
     
     <item>
       <title>Proin Sodales et Dolor sed Congue</title>
-      <link>https://tsteg.github.io/post/proin-sodales-et-dolor-sed-congue/</link>
+      <link>https://tsteggall.github.io/post/proin-sodales-et-dolor-sed-congue/</link>
       <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://tsteg.github.io/post/proin-sodales-et-dolor-sed-congue/</guid>
+      <guid>https://tsteggall.github.io/post/proin-sodales-et-dolor-sed-congue/</guid>
       <description>Sed vehicula purus nec dolor sagittis rutrum. Vestibulum maximus purus nec nunc blandit pulvinar. Donec odio sapien, pretium et finibus non, rhoncus a nisi.
 In nec arcu odio. Nulla quis felis eget nisl luctus porta. Quisque quis nisi vestibulum, euismod mi in, aliquet odio. Duis vel augue pellentesque arcu dignissim bibendum. Phasellus rutrum aliquam eros, nec posuere erat sollicitudin in. Duis fringilla, nunc eget tempus vestibulum, tellus tortor consectetur sem, nec lobortis odio ligula vitae turpis.</description>
     </item>
     
     <item>
       <title>Vestibulum Tincidunt</title>
-      <link>https://tsteg.github.io/post/vestibulum-tincidunt/</link>
+      <link>https://tsteggall.github.io/post/vestibulum-tincidunt/</link>
       <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://tsteg.github.io/post/vestibulum-tincidunt/</guid>
+      <guid>https://tsteggall.github.io/post/vestibulum-tincidunt/</guid>
       <description>Vivamus convallis diam imperdiet neque sodales ultricies.
 Vestibulum tincidunt felis sed metus imperdiet. Eget volutpat felis imperdiet. Integer lobortis tincidunt tempor.
 Phasellus interdum urna tellus. Nullam non mi lorem. Donec rhoncus felis nec enim dictum, et faucibus nisl dignissim. Mauris sed ligula ex. Duis tristique, lacus eget rutrum cursus, lectus leo vestibulum ligula, ut pulvinar magna elit eu ex. Nam malesuada sagittis enim id euismod. Mauris leo massa, tincidunt ac aliquet fringilla, iaculis vel tortor.</description>
@@ -56,10 +56,10 @@ Phasellus interdum urna tellus. Nullam non mi lorem. Donec rhoncus felis nec eni
     
     <item>
       <title>Hello R Markdown</title>
-      <link>https://tsteg.github.io/post/2015-07-23-r-rmarkdown/</link>
+      <link>https://tsteggall.github.io/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>https://tsteg.github.io/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>https://tsteggall.github.io/post/2015-07-23-r-rmarkdown/</guid>
       <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
 summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>

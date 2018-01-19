@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Anecdotal Evidence</title>
-    <link>https://tsteg.github.io/</link>
+    <link>https://tsteggall.github.io/</link>
     <description>Recent content on Anecdotal Evidence</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2018, Tim Steggall; all rights reserved.</copyright>
     <lastBuildDate>Thu, 18 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://tsteg.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tsteggall.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>hello-world</title>
-      <link>https://tsteg.github.io/post/hello-world/</link>
+      <link>https://tsteggall.github.io/post/hello-world/</link>
       <pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://tsteg.github.io/post/hello-world/</guid>
+      <guid>https://tsteggall.github.io/post/hello-world/</guid>
       <description>Test Post
 Hello World</description>
     </item>
     
     <item>
       <title>Aenean: Odio orci MMXII</title>
-      <link>https://tsteg.github.io/presentation/aenean-odio-orci-mmxii/</link>
+      <link>https://tsteggall.github.io/presentation/aenean-odio-orci-mmxii/</link>
       <pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://tsteg.github.io/presentation/aenean-odio-orci-mmxii/</guid>
+      <guid>https://tsteggall.github.io/presentation/aenean-odio-orci-mmxii/</guid>
       <description>&lt;p&gt;Aenean odio orci, semper nec rhoncus id, rutrum id velit.
 Maecenas et consequat augue, et venenatis leo.
 &lt;/p&gt;</description>
@@ -35,10 +35,10 @@ Maecenas et consequat augue, et venenatis leo.
     
     <item>
       <title>Ullamcorper Ultrices Pellentesque (MMXV)</title>
-      <link>https://tsteg.github.io/presentation/ullamcorper-ultrices-pellentesque/</link>
+      <link>https://tsteggall.github.io/presentation/ullamcorper-ultrices-pellentesque/</link>
       <pubDate>Sun, 27 Nov 2016 12:28:12 -0700</pubDate>
       
-      <guid>https://tsteg.github.io/presentation/ullamcorper-ultrices-pellentesque/</guid>
+      <guid>https://tsteggall.github.io/presentation/ullamcorper-ultrices-pellentesque/</guid>
       <description> Aliquam ullamcorper ultrices pellentesque. Suspendisse interdum, sem ut aliquet pretium. Velit justo volutpat lorem, ac vulputate lacus metus at mauris.
   Suspendisse vestibulum Ex sit amet dictum rutrum, arcu tortor tincidunt orci, tempor pellentesque nisi sapien a ante. Mauris sodales libero luctus nisl commodo, id tempus massa molestie.
  </description>
@@ -46,10 +46,10 @@ Maecenas et consequat augue, et venenatis leo.
     
     <item>
       <title>Ornare Diam</title>
-      <link>https://tsteg.github.io/project/ornare-diam/</link>
+      <link>https://tsteggall.github.io/project/ornare-diam/</link>
       <pubDate>Thu, 24 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://tsteg.github.io/project/ornare-diam/</guid>
+      <guid>https://tsteggall.github.io/project/ornare-diam/</guid>
       <description>magna condimentum   Nam in molestie metus
 Fusce tristique Acus id faucibus lacinia, dui nulla consequat felis, ac rhoncus magna tellus nec nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 Etiam condimentum dui turpis, a auctor magna condimentum at. Integer non pharetra elit. Aenean auctor, urna id ullamcorper posuere, tellus purus sollicitudin mi, vel dapibus tellus nulla eget mi.
@@ -58,10 +58,10 @@ Ut vulputate luctus arcu nec consequat.</description>
     
     <item>
       <title>Accumsan Ultricies Turpis?</title>
-      <link>https://tsteg.github.io/post/accumsan-ultricies-turpis/</link>
+      <link>https://tsteggall.github.io/post/accumsan-ultricies-turpis/</link>
       <pubDate>Wed, 23 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://tsteg.github.io/post/accumsan-ultricies-turpis/</guid>
+      <guid>https://tsteggall.github.io/post/accumsan-ultricies-turpis/</guid>
       <description>Image via CrunchBase   Volutpat vel consequat eget. Et egestas sit amet velit.
  Duis turpis libero, pretium et mauris eu, volutpat mollis tellus. Donec malesuada vel augue sit amet imperdiet. Vestibulum maximus et leo non laoreet.
  Maecenas erat lacus, volutpat vel consequat eget, egestas sit amet velit. Mauris a velit imperdiet, dictum leo sit amet, tempor tellus. Vestibulum a congue tortor. Quisque luctus tincidunt neque ornare cursus.</description>
@@ -69,20 +69,20 @@ Ut vulputate luctus arcu nec consequat.</description>
     
     <item>
       <title>Proin Sodales et Dolor sed Congue</title>
-      <link>https://tsteg.github.io/post/proin-sodales-et-dolor-sed-congue/</link>
+      <link>https://tsteggall.github.io/post/proin-sodales-et-dolor-sed-congue/</link>
       <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://tsteg.github.io/post/proin-sodales-et-dolor-sed-congue/</guid>
+      <guid>https://tsteggall.github.io/post/proin-sodales-et-dolor-sed-congue/</guid>
       <description>Sed vehicula purus nec dolor sagittis rutrum. Vestibulum maximus purus nec nunc blandit pulvinar. Donec odio sapien, pretium et finibus non, rhoncus a nisi.
 In nec arcu odio. Nulla quis felis eget nisl luctus porta. Quisque quis nisi vestibulum, euismod mi in, aliquet odio. Duis vel augue pellentesque arcu dignissim bibendum. Phasellus rutrum aliquam eros, nec posuere erat sollicitudin in. Duis fringilla, nunc eget tempus vestibulum, tellus tortor consectetur sem, nec lobortis odio ligula vitae turpis.</description>
     </item>
     
     <item>
       <title>Vestibulum Tincidunt</title>
-      <link>https://tsteg.github.io/post/vestibulum-tincidunt/</link>
+      <link>https://tsteggall.github.io/post/vestibulum-tincidunt/</link>
       <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://tsteg.github.io/post/vestibulum-tincidunt/</guid>
+      <guid>https://tsteggall.github.io/post/vestibulum-tincidunt/</guid>
       <description>Vivamus convallis diam imperdiet neque sodales ultricies.
 Vestibulum tincidunt felis sed metus imperdiet. Eget volutpat felis imperdiet. Integer lobortis tincidunt tempor.
 Phasellus interdum urna tellus. Nullam non mi lorem. Donec rhoncus felis nec enim dictum, et faucibus nisl dignissim. Mauris sed ligula ex. Duis tristique, lacus eget rutrum cursus, lectus leo vestibulum ligula, ut pulvinar magna elit eu ex. Nam malesuada sagittis enim id euismod. Mauris leo massa, tincidunt ac aliquet fringilla, iaculis vel tortor.</description>
@@ -90,10 +90,10 @@ Phasellus interdum urna tellus. Nullam non mi lorem. Donec rhoncus felis nec eni
     
     <item>
       <title>Vitae Blandit Turpis Blah</title>
-      <link>https://tsteg.github.io/presentation/vitae-blandit-turpis/</link>
+      <link>https://tsteggall.github.io/presentation/vitae-blandit-turpis/</link>
       <pubDate>Fri, 18 Nov 2016 14:06:00 -0500</pubDate>
       
-      <guid>https://tsteg.github.io/presentation/vitae-blandit-turpis/</guid>
+      <guid>https://tsteggall.github.io/presentation/vitae-blandit-turpis/</guid>
       <description> Pellentesque ac magna at lorem semper aliquet. Proin sapien dolor, ultrices vel rutrum in, volutpat. Vitae tellus. Pellentesque mollis arcu bibendum magna fermentum suscipit. Morbi fringilla tortor a ex molestie, ac viverra dui pulvinar.
 Vivamus eu Massa Maximus, ornare augue mattis, condimentum sapien.
 Originally given in NYC Nov 14 at GothamGo.
@@ -102,20 +102,20 @@ Originally given in NYC Nov 14 at GothamGo.
     
     <item>
       <title>Nulla Mauris Sit</title>
-      <link>https://tsteg.github.io/project/nulla-mauris-sit/</link>
+      <link>https://tsteggall.github.io/project/nulla-mauris-sit/</link>
       <pubDate>Sun, 13 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://tsteg.github.io/project/nulla-mauris-sit/</guid>
+      <guid>https://tsteggall.github.io/project/nulla-mauris-sit/</guid>
       <description>  Pellentesque turpis lorem, sollicitudin et imperdiet ac, venenatis non lacus. Nunc id urna sit amet ipsum sollicitudin ultrices sed eget dui. Aliquam ullamcorper ultrices pellentesque.
 Installation  Suspendisse interdum, sem ut aliquet pretium Velit justo volutpat lorem Ac vulputate [lacus url=&amp;rsquo;&amp;lt;URL TO FILE ON GITHUB&amp;gt;&amp;rsquo;] metus at mauris.  </description>
     </item>
     
     <item>
       <title>Cras Consequat et Risus</title>
-      <link>https://tsteg.github.io/project/cras-consequat-et-risus/</link>
+      <link>https://tsteggall.github.io/project/cras-consequat-et-risus/</link>
       <pubDate>Fri, 11 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://tsteg.github.io/project/cras-consequat-et-risus/</guid>
+      <guid>https://tsteggall.github.io/project/cras-consequat-et-risus/</guid>
       <description>&lt;p&gt;Nullam Cursus Rhoncus&lt;/p&gt;
 
 &lt;h1 id=&#34;velit-in-dictum&#34;&gt;Velit in Dictum&lt;/h1&gt;
@@ -130,10 +130,10 @@ Sed sed tellus in diam tristique tempor.
     
     <item>
       <title>Hello R Markdown</title>
-      <link>https://tsteg.github.io/post/2015-07-23-r-rmarkdown/</link>
+      <link>https://tsteggall.github.io/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>https://tsteg.github.io/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>https://tsteggall.github.io/post/2015-07-23-r-rmarkdown/</guid>
       <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
 summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
