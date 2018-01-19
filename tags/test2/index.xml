@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Test2 on Anecdotal Evidence</title>
-    <link>https://tsteggall.github.io/tags/test2/</link>
+    <link>/tags/test2/</link>
     <description>Recent content in Test2 on Anecdotal Evidence</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2018, Tim Steggall; all rights reserved.</copyright>
     <lastBuildDate>Thu, 18 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://tsteggall.github.io/tags/test2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/test2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>hello-world</title>
-      <link>https://tsteggall.github.io/post/hello-world/</link>
+      <link>/post/hello-world/</link>
       <pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://tsteggall.github.io/post/hello-world/</guid>
+      <guid>/post/hello-world/</guid>
       <description>Test Post
 Hello World</description>
     </item>

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fingilla on Anecdotal Evidence</title>
-    <link>https://tsteggall.github.io/tags/fingilla/</link>
+    <link>/tags/fingilla/</link>
     <description>Recent content in Fingilla on Anecdotal Evidence</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2018, Tim Steggall; all rights reserved.</copyright>
     <lastBuildDate>Fri, 18 Nov 2016 14:06:00 -0500</lastBuildDate>
     
-	<atom:link href="https://tsteggall.github.io/tags/fingilla/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/fingilla/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Vitae Blandit Turpis Blah</title>
-      <link>https://tsteggall.github.io/presentation/vitae-blandit-turpis/</link>
+      <link>/presentation/vitae-blandit-turpis/</link>
       <pubDate>Fri, 18 Nov 2016 14:06:00 -0500</pubDate>
       
-      <guid>https://tsteggall.github.io/presentation/vitae-blandit-turpis/</guid>
+      <guid>/presentation/vitae-blandit-turpis/</guid>
       <description> Pellentesque ac magna at lorem semper aliquet. Proin sapien dolor, ultrices vel rutrum in, volutpat. Vitae tellus. Pellentesque mollis arcu bibendum magna fermentum suscipit. Morbi fringilla tortor a ex molestie, ac viverra dui pulvinar.
 Vivamus eu Massa Maximus, ornare augue mattis, condimentum sapien.
 Originally given in NYC Nov 14 at GothamGo.
