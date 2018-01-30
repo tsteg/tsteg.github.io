@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anecdotal Evidence on Anecdotal Evidence</title>
+    <link>/</link>
+    <description>Recent content in Anecdotal Evidence on Anecdotal Evidence</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 Tim Steggall.</copyright>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0700</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>2018 Book List</title>
+      <link>/post/book-list/</link>
+      <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/book-list/</guid>
+      <description>&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;The Three-Body Problem by Cixin Liu, trans. by Ken Liu&lt;/li&gt;
+&lt;li&gt;Shoe Dog: A Memoir by the Creator of Nike by Phil Knight&lt;/li&gt;
+&lt;li&gt;Killers of the Flower Moon: The Osage Murders and the Birth of the FBI by David Grann&lt;/li&gt;
+&lt;li&gt;Gnomon by Nick Harkaway&lt;/li&gt;
+&lt;li&gt;The Ocean at the End of the Lane by Neil Gaiman&lt;/li&gt;
+&lt;li&gt;The Catcher in the Rye by J.D. Salinger&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Currently Reading:&lt;/strong&gt; Siddhartha by Herman Hesse&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Coming Soon</title>
+      <link>/project/coming-soon/</link>
+      <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/coming-soon/</guid>
+      <description>&lt;p&gt;I plan to use the &lt;strong&gt;Projects&lt;/strong&gt; space for larger, primarily data driven analyses. These larger projects will likely/hopefully tie into multiple blog posts.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

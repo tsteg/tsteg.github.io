@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Anecdotal Evidence</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Anecdotal Evidence</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 Tim Steggall.</copyright>
+    <lastBuildDate>Tue, 30 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2018 Book List</title>
+      <link>/post/book-list/</link>
+      <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/book-list/</guid>
+      <description>The Three-Body Problem by Cixin Liu, trans. by Ken LiuShoe Dog: A Memoir by the Creator of Nike by Phil KnightKillers of the Flower Moon: The Osage Murders and the Birth of the FBI by David GrannGnomon by Nick HarkawayThe Ocean at the End of the Lane by Neil GaimanThe Catcher in the Rye by J.D. SalingerCurrently Reading: Siddhartha by Herman Hesse</description>
+    </item>
+    
+  </channel>
+</rss>

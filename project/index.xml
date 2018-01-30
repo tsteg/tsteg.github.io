@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Anecdotal Evidence</title>
+    <link>/project/</link>
+    <description>Recent content in Projects on Anecdotal Evidence</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 Tim Steggall.</copyright>
+    <lastBuildDate>Tue, 30 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Coming Soon</title>
+      <link>/project/coming-soon/</link>
+      <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/coming-soon/</guid>
+      <description>I plan to use the Projects space for larger, primarily data driven analyses. These larger projects will likely/hopefully tie into multiple blog posts.</description>
+    </item>
+    
+  </channel>
+</rss>
