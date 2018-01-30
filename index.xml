@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Anecdotal Evidence on Anecdotal Evidence</title>
-    <link>/</link>
+    <link>https://tsteggall.github.io/</link>
     <description>Recent content in Anecdotal Evidence on Anecdotal Evidence</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>2018 Book List</title>
-      <link>/post/book-list/</link>
+      <link>https://tsteggall.github.io/post/book-list/</link>
       <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/book-list/</guid>
+      <guid>https://tsteggall.github.io/post/book-list/</guid>
       <description>&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;The Three-Body Problem by Cixin Liu, trans. by Ken Liu&lt;/li&gt;
 &lt;li&gt;Shoe Dog: A Memoir by the Creator of Nike by Phil Knight&lt;/li&gt;
@@ -30,10 +30,10 @@
     
     <item>
       <title>Coming Soon</title>
-      <link>/project/coming-soon/</link>
+      <link>https://tsteggall.github.io/project/coming-soon/</link>
       <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/project/coming-soon/</guid>
+      <guid>https://tsteggall.github.io/project/coming-soon/</guid>
       <description>&lt;p&gt;I plan to use the &lt;strong&gt;Projects&lt;/strong&gt; space for larger, primarily data driven analyses. These larger projects will likely/hopefully tie into multiple blog posts.&lt;/p&gt;
 </description>
     </item>
