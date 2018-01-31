@@ -5,7 +5,7 @@
     
     <url>
     
-      <loc>https://tsteggall.github.io/post/book-list/</loc>
+      <loc>/post/2017-book-list/</loc>
       <lastmod>2018-01-30T00:00:00+00:00</lastmod>
     </url>
     
@@ -14,7 +14,7 @@
     
     <url>
     
-      <loc>https://tsteggall.github.io/project/coming-soon/</loc>
+      <loc>/post/book-list/</loc>
       <lastmod>2018-01-30T00:00:00+00:00</lastmod>
     </url>
     
@@ -23,7 +23,16 @@
     
     <url>
     
-      <loc>https://tsteggall.github.io/tags/academic/</loc>
+      <loc>/project/coming-soon/</loc>
+      <lastmod>2018-01-30T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/academic/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -32,7 +41,7 @@
     
     <url>
     
-      <loc>https://tsteggall.github.io/tags/2018/</loc>
+      <loc>/tags/2017/</loc>
       <lastmod>2018-01-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -42,7 +51,17 @@
     
     <url>
     
-      <loc>https://tsteggall.github.io/</loc>
+      <loc>/tags/2018/</loc>
+      <lastmod>2018-01-30T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/</loc>
       <lastmod>2017-10-15T00:00:00-07:00</lastmod>
       <priority>0</priority>
     </url>
@@ -52,7 +71,7 @@
     
     <url>
     
-      <loc>https://tsteggall.github.io/tags/book-list/</loc>
+      <loc>/categories/book/</loc>
       <lastmod>2018-01-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -62,7 +81,7 @@
     
     <url>
     
-      <loc>https://tsteggall.github.io/categories/books/</loc>
+      <loc>/tags/book-list/</loc>
       <lastmod>2018-01-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -72,7 +91,7 @@
     
     <url>
     
-      <loc>https://tsteggall.github.io/categories/</loc>
+      <loc>/categories/books/</loc>
       <lastmod>2018-01-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -82,7 +101,7 @@
     
     <url>
     
-      <loc>https://tsteggall.github.io/post/</loc>
+      <loc>/categories/</loc>
       <lastmod>2018-01-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -92,7 +111,7 @@
     
     <url>
     
-      <loc>https://tsteggall.github.io/categories/project/</loc>
+      <loc>/post/</loc>
       <lastmod>2018-01-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -102,7 +121,7 @@
     
     <url>
     
-      <loc>https://tsteggall.github.io/project/</loc>
+      <loc>/categories/project/</loc>
       <lastmod>2018-01-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -112,16 +131,7 @@
     
     <url>
     
-      <loc>https://tsteggall.github.io/publication_types/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://tsteggall.github.io/tags/read-harder/</loc>
+      <loc>/project/</loc>
       <lastmod>2018-01-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -131,7 +141,26 @@
     
     <url>
     
-      <loc>https://tsteggall.github.io/tags/</loc>
+      <loc>/publication_types/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/read-harder/</loc>
+      <lastmod>2018-01-30T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
