@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Anecdotal Evidence on Anecdotal Evidence</title>
-    <link>/</link>
+    <link>https://tsteggall.github.io/</link>
     <description>Recent content in Anecdotal Evidence on Anecdotal Evidence</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,56 +11,89 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>2017 Book List</title>
-      <link>/post/2017-book-list/</link>
+      <title>2017 Reading List</title>
+      <link>https://tsteggall.github.io/post/2017-book-list/</link>
       <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-book-list/</guid>
+      <guid>https://tsteggall.github.io/post/2017-book-list/</guid>
       <description>&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Strangers in Their Own Land by Arlie Russell Hochschild&lt;/li&gt;
-&lt;li&gt;The Undoing Project by Michael Lewis&lt;/li&gt;
-&lt;li&gt;What it Takes by Richard Ben Cramer&lt;/li&gt;
-&lt;li&gt;Midnight Riot by Ben Aaronovitch&lt;/li&gt;
-&lt;li&gt;Just Mercy by Bryan Stevenson&lt;/li&gt;
-&lt;li&gt;Moon Over Soho by Ben Aaronovitch&lt;/li&gt;
-&lt;li&gt;Data Science for Business by Foster Provost and Tom Fawcett&lt;/li&gt;
-&lt;li&gt;The UnWinding by George Packer&lt;/li&gt;
-&lt;li&gt;Whispers Underground by Ben Aaronovitch&lt;/li&gt;
-&lt;li&gt;Hillbilly Elegy by J.D. Vance&lt;/li&gt;
-&lt;li&gt;Broken Homes by Ben Aaronovitch&lt;/li&gt;
-&lt;li&gt;Foxglove Summer by Ben Aaronovitch&lt;/li&gt;
-&lt;li&gt;The Hanging Tree by Ben Aaronovitch&lt;/li&gt;
-&lt;li&gt;Evicted by Matthew Desmond&lt;/li&gt;
-&lt;li&gt;SQL Queries for Mere Mortals by John L. Viescas and Michael J. Hernandez&lt;/li&gt;
-&lt;li&gt;The Magic of Thinking Big by David J. Schwartz&lt;/li&gt;
-&lt;li&gt;White Teeth by Zadie Smith&lt;/li&gt;
-&lt;li&gt;When Breath Becomes Air by Paul Kalanithi&lt;/li&gt;
-&lt;li&gt;The Attention Merchants by Tim Wu&lt;/li&gt;
-&lt;li&gt;The Hike by Drew Magary&lt;/li&gt;
-&lt;li&gt;The Information: A History, a Theory, a Flood by James Gleick&lt;/li&gt;
-&lt;li&gt;Team of Teams by Gen. Stanley McChrystal&lt;/li&gt;
-&lt;li&gt;The Innovators by Walter Isaacson&lt;/li&gt;
-&lt;li&gt;The Master Switch by Tim Wu&lt;/li&gt;
-&lt;li&gt;Pattern Recognition by William Gibson&lt;/li&gt;
-&lt;li&gt;Before the Storm by Rick Perlstein&lt;/li&gt;
-&lt;li&gt;Dark Money by Jane Mayer&lt;/li&gt;
-&lt;li&gt;The Restaurant at the End of the Universe by Douglas Adams&lt;/li&gt;
-&lt;li&gt;Principles by Ray Dalio&lt;/li&gt;
-&lt;li&gt;A Legacy of Spies by John Le Carre&lt;/li&gt;
-&lt;li&gt;Spook Country by William Gibson&lt;/li&gt;
-&lt;li&gt;R for Data Science by Hadley Wickham and Garrett Grolemund&lt;/li&gt;
-&lt;li&gt;The Power Broker: Robert Moses and the Fall of New York by Robert A. Caro&lt;/li&gt;
+&lt;li&gt;Strangers in Their Own Land by Arlie Russell Hochschild&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;The Undoing Project by Michael Lewis&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;What it Takes by Richard Ben Cramer&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Midnight Riot by Ben Aaronovitch&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Just Mercy by Bryan Stevenson&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Moon Over Soho by Ben Aaronovitch&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Data Science for Business by Foster Provost and Tom Fawcett&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;The Unwinding by George Packer&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Whispers Underground by Ben Aaronovitch&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Hillbilly Elegy by J.D. Vance&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Broken Homes by Ben Aaronovitch&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Foxglove Summer by Ben Aaronovitch&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;The Hanging Tree by Ben Aaronovitch&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Evicted by Matthew Desmond&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;SQL Queries for Mere Mortals by John L. Viescas and Michael J. Hernandez&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;The Magic of Thinking Big by David J. Schwartz&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;White Teeth by Zadie Smith&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;When Breath Becomes Air by Paul Kalanithi&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;The Attention Merchants by Tim Wu&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;The Hike by Drew Magary&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;The Information: A History, a Theory, a Flood by James Gleick&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Team of Teams by Gen. Stanley McChrystal&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;The Innovators by Walter Isaacson&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;The Master Switch by Tim Wu&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Pattern Recognition by William Gibson&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Before the Storm by Rick Perlstein&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Dark Money by Jane Mayer&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;The Restaurant at the End of the Universe by Douglas Adams&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Principles by Ray Dalio&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;A Legacy of Spies by John Le Carre&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Spook Country by William Gibson&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;R for Data Science by Hadley Wickham and Garrett Grolemund&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;The Power Broker: Robert Moses and the Fall of New York by Robert A. Caro&lt;br /&gt;
+&lt;/li&gt;
 &lt;li&gt;Zero History by William Gibson&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
     
     <item>
-      <title>2018 Book List</title>
-      <link>/post/book-list/</link>
+      <title>2018 Reading List</title>
+      <link>https://tsteggall.github.io/post/reading-list/</link>
       <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/book-list/</guid>
+      <guid>https://tsteggall.github.io/post/reading-list/</guid>
       <description>&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;The Three-Body Problem by Cixin Liu, trans. by Ken Liu&lt;/li&gt;
 &lt;li&gt;Shoe Dog: A Memoir by the Creator of Nike by Phil Knight&lt;/li&gt;
@@ -68,17 +101,18 @@
 &lt;li&gt;Gnomon by Nick Harkaway&lt;/li&gt;
 &lt;li&gt;The Ocean at the End of the Lane by Neil Gaiman&lt;/li&gt;
 &lt;li&gt;The Catcher in the Rye by J.D. Salinger&lt;/li&gt;
+&lt;li&gt;Siddhartha by Herman Hesse&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;Currently Reading:&lt;/strong&gt; Siddhartha by Herman Hesse&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Currently Reading:&lt;/strong&gt; The Ministry of Utmost Happiness by Arundhati Roy&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Coming Soon</title>
-      <link>/project/coming-soon/</link>
+      <link>https://tsteggall.github.io/project/coming-soon/</link>
       <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/project/coming-soon/</guid>
+      <guid>https://tsteggall.github.io/project/coming-soon/</guid>
       <description>&lt;p&gt;I plan to use the &lt;strong&gt;Projects&lt;/strong&gt; space for larger, primarily data driven analyses. These larger projects will likely/hopefully tie into multiple blog posts.&lt;/p&gt;
 </description>
     </item>
