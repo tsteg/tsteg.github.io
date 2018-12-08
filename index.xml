@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Anecdotal Evidence on Anecdotal Evidence</title>
-    <link>https://tsteggall.github.io/</link>
+    <link>/</link>
     <description>Recent content in Anecdotal Evidence on Anecdotal Evidence</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,11 +11,86 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>#Tidy Tuesday 12-4-2018: Medium Blog Posts</title>
+      <link>/post/tidy-tuesday-medium/</link>
+      <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/tidy-tuesday-medium/</guid>
+      <description>&lt;p&gt;So my first attempt at a #TidyTuesday - it’s not quite as easy as &lt;a href=&#34;https://www.youtube.com/watch?v=C69QyycHsgE&#34;&gt;DRob makes it look!&lt;/a&gt; The data on Medium blog posts was interesting and in good shape, but for my first #TidyTuesday post I had a bit of a brain cramp generating ideas. I’ve been listening to a podcast lately that talks about the importance of a consistent posting schedule for bloggers, so I tried to dig into the relationship between an author’s posting schedule and the number of claps they receive. Unfortunately I didn’t find much; I might dig a little deeper with the full Kaggle dataset in the future and not just the AI related tags.&lt;/p&gt;
+&lt;p&gt;After spending a little too much time looking into that relationship, I decided to keep things simple for my first post and threw together some straightforward visualizations looking at the distribution of blog posts across days of the week, the most prolific authors, and the posting routines of the individual prolific authors.&lt;/p&gt;
+&lt;div id=&#34;data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(lubridate)
+
+
+medium &amp;lt;- read_csv(&amp;quot;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018-12-04/medium_datasci.csv&amp;quot;)
+
+theme_set(theme_light())&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;on-what-days-of-the-week-are-articles-typically-posted&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;On what days of the week are articles typically posted?&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(lubridate)
+
+medium %&amp;gt;%
+  unite(date, year, month, day, sep = &amp;quot;-&amp;quot;) %&amp;gt;%
+  mutate(day = wday(date, label = TRUE)) %&amp;gt;%
+  count(day, sort=TRUE) %&amp;gt;%
+  ggplot(aes(x=day, y=n, fill = day)) +
+  geom_col() +
+  labs(title = &amp;quot;Posts per Day of the Week&amp;quot;, y = &amp;quot;# of Posts&amp;quot;) +
+  geom_text(aes(label = n, vjust = -0.3)) +
+  theme(legend.position = &amp;quot;none&amp;quot;,
+        axis.title.x = element_blank())&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-12-06-tidy-tuesday-medium_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Makes sense that writers wouldn’t post on weekends - readership is probably less consistent on weekends, and wouldn’t want potentially popular posts to get overlooked.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;who-are-the-most-prolific-authors&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Who are the most prolific authors?&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;medium %&amp;gt;%
+  count(author, sort = TRUE) %&amp;gt;%
+  drop_na() %&amp;gt;%
+  top_n(n=10) %&amp;gt;%
+  ggplot(aes(x=fct_reorder(author,n), y=n)) +
+  geom_point() +
+  labs(title = &amp;quot;Most prolific authors&amp;quot;, y = &amp;quot;Number of Articles&amp;quot;, x = &amp;quot;Author&amp;quot;) +
+  coord_flip()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-12-06-tidy-tuesday-medium_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-is-the-posting-schedule-of-the-most-prolific-authors-top-10-authors&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What is the posting schedule of the most prolific authors (Top 10 authors)&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;prolific &amp;lt;- medium %&amp;gt;%
+  count(author, sort = TRUE) %&amp;gt;%
+  drop_na() %&amp;gt;%
+  top_n(n=10)
+
+author_by_day &amp;lt;- medium %&amp;gt;%
+  unite(date,year, month, day, sep=&amp;quot;-&amp;quot;) %&amp;gt;%
+  mutate(day = wday(date, label = TRUE)) %&amp;gt;%
+  filter(!is.na(author))
+
+author_by_day %&amp;gt;%
+  group_by(author,day) %&amp;gt;%
+  summarize(posts = n()) %&amp;gt;%
+  filter(author %in% prolific$author) %&amp;gt;%
+  ggplot(aes(x=factor(day), y=posts, color = author, group = author)) +
+  geom_line(size = 1) +
+  labs(title = &amp;quot;What is the posting schedule for the top authors?&amp;quot;,
+       y = &amp;quot;# of Posts&amp;quot;) +
+  theme(axis.title.x = element_blank())&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-12-06-tidy-tuesday-medium_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;I guess if you want to be the most prolific writer, it makes sense that you would have a stable publishing schedule, which Yves Mulkers does. Yves also publishes more often on weekends, in contrast to nearly every other author. Synced and Alibaba Cloud appear to take weekends off, while Corsair’s Publishing doesn’t post on Sundays. Yves is just on a different level from everyone else.&lt;/p&gt;
+&lt;p&gt;Relatively straightforward first #TidyTuesday but thanks for making it all the way to the bottom! Let me know if you have any questions or ways to improve.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>2017 Reading List</title>
-      <link>https://tsteggall.github.io/post/2017-book-list/</link>
+      <link>/post/2017-book-list/</link>
       <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://tsteggall.github.io/post/2017-book-list/</guid>
+      <guid>/post/2017-book-list/</guid>
       <description>&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Strangers in Their Own Land by Arlie Russell Hochschild&lt;br /&gt;
 &lt;/li&gt;
@@ -90,10 +165,10 @@
     
     <item>
       <title>2018 Reading List</title>
-      <link>https://tsteggall.github.io/post/reading-list/</link>
+      <link>/post/reading-list/</link>
       <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://tsteggall.github.io/post/reading-list/</guid>
+      <guid>/post/reading-list/</guid>
       <description>&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;The Three-Body Problem by Cixin Liu, trans. by Ken Liu&lt;/li&gt;
 &lt;li&gt;Shoe Dog: A Memoir by the Creator of Nike by Phil Knight&lt;/li&gt;
@@ -129,18 +204,24 @@
 &lt;/li&gt;
 &lt;li&gt;Death by Meeting by Patrick Lencioni&lt;br /&gt;
 &lt;/li&gt;
-&lt;li&gt;Winners Take All: The Elite Charade of Changing the World by Anand Giridharadas&lt;/li&gt;
+&lt;li&gt;Winners Take All: The Elite Charade of Changing the World by Anand Giridharadas&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;The Color of Law: A Forgotten History of How Our Government Segregated America by Richard Rothstein&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Stubborn Attachments by Tyler Cowen&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Black Panther: A Nation Under Our Feet Book 1 by Ta-Nehisi Coates&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;Currently Reading:&lt;/strong&gt; The Color of Law: A Forgotten History of How Our Government Segregated America by Richard Rothstein&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Currently Reading:&lt;/strong&gt; Open: An Autobiography by Andre Agassi&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Coming Soon</title>
-      <link>https://tsteggall.github.io/project/coming-soon/</link>
+      <link>/project/coming-soon/</link>
       <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://tsteggall.github.io/project/coming-soon/</guid>
+      <guid>/project/coming-soon/</guid>
       <description>&lt;p&gt;I plan to use the &lt;strong&gt;Projects&lt;/strong&gt; space for larger, primarily data driven analyses. These larger projects will likely/hopefully tie into multiple blog posts.&lt;/p&gt;
 </description>
     </item>
