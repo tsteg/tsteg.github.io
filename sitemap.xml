@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>/post/color-of-law/</loc>
+      <lastmod>2018-12-12T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/post/tidy-tuesday-medium/</loc>
       <lastmod>2018-12-06T00:00:00+00:00</lastmod>
     </url>
@@ -71,7 +80,7 @@
     <url>
     
       <loc>/tags/2018/</loc>
-      <lastmod>2018-01-30T00:00:00+00:00</lastmod>
+      <lastmod>2018-12-12T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -90,8 +99,18 @@
     
     <url>
     
+      <loc>/tags/book-review/</loc>
+      <lastmod>2018-12-12T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/categories/books/</loc>
-      <lastmod>2018-01-30T00:00:00+00:00</lastmod>
+      <lastmod>2018-12-12T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -101,7 +120,7 @@
     <url>
     
       <loc>/categories/</loc>
-      <lastmod>2018-01-30T00:00:00+00:00</lastmod>
+      <lastmod>2018-12-12T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -111,7 +130,7 @@
     <url>
     
       <loc>/post/</loc>
-      <lastmod>2018-12-06T00:00:00+00:00</lastmod>
+      <lastmod>2018-12-12T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

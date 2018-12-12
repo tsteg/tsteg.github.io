@@ -11,7 +11,51 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>#Tidy Tuesday 12-4-2018: Medium Blog Posts</title>
+      <title>The Color of Law by Richard Rothstein</title>
+      <link>/post/color-of-law/</link>
+      <pubDate>Wed, 12 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/color-of-law/</guid>
+      <description>&lt;p&gt;&lt;em&gt;The Color of Law&lt;/em&gt; starts by presenting a series of Supreme Court decisions that cemented and popularized the myth of &lt;em&gt;de facto&lt;/em&gt; segregation, not just in American jurisprudence, but in our culture. Rothstein points to opinions from Justice Potter Stewart in 1974, Justice Anthony Kennedy in 1992, and finishes with this quote from a Chief Justice John Roberts in 2007: “Where [racial imbalance] is a product not of state action but of private choices, it does not have constitutional implications.” Rothstein spends the next 200+ pages methodically and systematically dismantling the argument that segregation was simply a product of social choices, and not the result of policies enacted by the federal, state and local governments (&lt;em&gt;de jure segregation&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;This book is clearly the work of years of research, and the evidence is damning. At times the book is a bit dry and dense, but the magnitude of evidence is necessary and overwhelming. Rothstein goes point by point - examining housing contracts, zoning laws, public housing mandates, state sanctioned violence, suppressed incomes, and more to refute the myth of de facto segregation that has taken hold in American society. Furthermore, Rothstein provides personal stories of the impact of the different forms of discrimination - if the research, facts, and explanation of the laws weren’t enough, these stories provoke an emotional reaction. Similar to &lt;em&gt;The New Jim Crow&lt;/em&gt;, &lt;em&gt;The Color of Law&lt;/em&gt; shines a bright light on government-approved injustice, and makes the argument that unless we actively work to change, this default &lt;em&gt;de facto&lt;/em&gt; explanation will allow our government and communities to look the other way while people continue to suffer.&lt;/p&gt;
+&lt;div id=&#34;related-readings&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Related Readings&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.tampabay.com/projects/2015/investigations/pinellas-failure-factories/&#34;&gt;Failure Factories in Florida&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“On Dec. 18, 2007, the Pinellas County School Board abandoned integration. They justified the vote with bold promises: Schools in poor, black neighborhoods would get more money, more staff, more resources. They delivered none of that. This is the story of how district leaders turned five once-average schools into Failure Factories.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;An amazing example of local journalism - a multi-part, Pulitzer Prize winning series by the Tampa Bay Times that examines the public schools in South St. Petersburg.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.scientificamerican.com/article/pollution-poverty-people-color-asthma-inner-city/&#34;&gt;Pollution, Poverty, and People of Color&lt;/a&gt;: Another multi-part series detailing the relationship between poverty and asthma in low income communities across the country. &lt;a href=&#34;https://www.scientificamerican.com/article/pollution-poverty-people-color-living-industry/&#34;&gt;Part 2&lt;/a&gt; focuses on Richmond, CA and discusses many of the same issues related to housing, zoning, and segregation as Rothstein. It’s devestating that our society simply accepts this as the current default, even in places like the progressive Bay Area.&lt;/p&gt;
+&lt;p&gt;Continuing with the CA theme - Rothstein mentions Berkeley, Palo Alto, and Marin as cities that exploited housing laws to discriminate against African Americans. Three very affluent and liberal cities that “benefitted” from these laws. California is in the midst of a housing crisis, and of course, most of the housing plans are being met with familiar NIMBY arguments. After reading this book, those arguments sure seem a hell of a lot weaker.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Similar books:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.com/Evicted-Poverty-Profit-American-City/dp/0553447459/ref=sr_1_2?ie=UTF8&amp;amp;qid=1544640231&amp;amp;sr=8-2&amp;amp;keywords=evicted+poverty+and+profit+in+the+american+city&#34;&gt;Evicted&lt;/a&gt; by Matthew Desmond&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.com/New-Jim-Crow-Incarceration-Colorblindness/dp/1595586431/ref=sr_1_1?ie=UTF8&amp;amp;qid=1544640261&amp;amp;sr=8-1&amp;amp;keywords=the+new+jim+crow&#34;&gt;The New Jim Crow&lt;/a&gt; by Michelle Alexander&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.com/Ghettoside-True-Story-Murder-America/dp/0385529996/ref=sr_1_1?ie=UTF8&amp;amp;qid=1544640300&amp;amp;sr=8-1&amp;amp;keywords=ghettoside&#34;&gt;Ghettoside&lt;/a&gt; by Jill Leovy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;future-blog-posts&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Future Blog Posts&lt;/h4&gt;
+&lt;p&gt;I would love to try to map current census data to the old zoning maps to see how much these communities have changed.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Demographics&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Income&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Wealth&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Healthcare options and outcomes&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Representation - this might actually be the most interesting. If, as I suspect, the demographics haven’t changed much, who is representing these communities in government?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>#TidyTuesday Week 36: Medium Blog Posts</title>
       <link>/post/tidy-tuesday-medium/</link>
       <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
       

@@ -7,13 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Tim Steggall.</copyright>
-    <lastBuildDate>Thu, 06 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>#Tidy Tuesday 12-4-2018: Medium Blog Posts</title>
+      <title>The Color of Law by Richard Rothstein</title>
+      <link>/post/color-of-law/</link>
+      <pubDate>Wed, 12 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/color-of-law/</guid>
+      <description>The Color of Law starts by presenting a series of Supreme Court decisions that cemented and popularized the myth of de facto segregation, not just in American jurisprudence, but in our culture. Rothstein points to opinions from Justice Potter Stewart in 1974, Justice Anthony Kennedy in 1992, and finishes with this quote from a Chief Justice John Roberts in 2007: “Where [racial imbalance] is a product not of state action but of private choices, it does not have constitutional implications.</description>
+    </item>
+    
+    <item>
+      <title>#TidyTuesday Week 36: Medium Blog Posts</title>
       <link>/post/tidy-tuesday-medium/</link>
       <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
       
