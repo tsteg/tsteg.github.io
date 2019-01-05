@@ -11,6 +11,141 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>#TidyTuesday 2019 Week 1: #Rstats Tweets</title>
+      <link>/post/rstats-tweets/</link>
+      <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/rstats-tweets/</guid>
+      <description>&lt;p&gt;Happy New Year! This first TidyTuesday dataset of 2019 was a great way to get the year started. I’ve been working on a separate side project that will include analyzing social media trends, so I thought this would be a good opportunity to test out at least one rough idea I’ve been kicking around.&lt;/p&gt;
+&lt;p&gt;I wanted to plot the most popular topics (as measured by word/token frequency) chronologically, to see if any particular keywords were unique to certain timeframes, and/or their frequency of use stood out. As I worked through this I had even more ideas about how to improve this in the future (anomaly detection?), but the primary goal was to find a rough method to detect certain events or issues that popped up over the course of 2018 #rstats tweets.&lt;/p&gt;
+&lt;div id=&#34;setup&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Setup&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(lubridate)
+library(tidytext)
+
+theme_set(theme_light())&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# I saw this method of importing the data in a couple other users TidyTuesday posts, but for some reason this didn&amp;#39;t work for me, so I manually downloaded the data.
+
+##download.file(&amp;quot;https://github.com/rfordatascience/tidytuesday/raw/master/data/2019/2019-01-01/rstats_tweets.rds&amp;quot;, &amp;quot;rstats_tweets.rds&amp;quot;)
+
+##tweets_raw &amp;lt;- read_rds(&amp;quot;rstats_tweets.rds&amp;quot;)
+
+tweets_raw &amp;lt;- read_rds(&amp;quot;~/Data/TidyTuesday/rstats_tweets.rds&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Based on my idea above, the actual number of columns I’ll need is much less than the 88 provided. I’m also only going to include tweets from 2018.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tweets_simple &amp;lt;- tweets_raw %&amp;gt;%
+  select(created_at, screen_name, text) %&amp;gt;%
+  filter(year(created_at) == 2018) %&amp;gt;%
+  mutate(week = week(created_at)) %&amp;gt;%
+  arrange(created_at)
+
+head(tweets_simple, n = 10)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 4
+##    created_at          screen_name  text                               week
+##    &amp;lt;dttm&amp;gt;              &amp;lt;chr&amp;gt;        &amp;lt;chr&amp;gt;                             &amp;lt;dbl&amp;gt;
+##  1 2018-01-01 00:04:21 Cruz_Julian_ Rbloggers Data science courses i~     1
+##  2 2018-01-01 00:08:03 d_olivaw     &amp;quot;So now I&amp;#39;ve got 1 warning and s~     1
+##  3 2018-01-01 00:22:03 znmeb        R Interface to Python • reticula~     1
+##  4 2018-01-01 00:24:37 fossilosophy &amp;quot;Finishing out the year with som~     1
+##  5 2018-01-01 00:26:37 Mooniac      Not usually a fan of Cheat-sheet~     1
+##  6 2018-01-01 00:30:19 Mooniac      Just the thing, instant clumping~     1
+##  7 2018-01-01 00:31:39 hrbrmstr     &amp;quot;So #rstats…let me clarify that ~     1
+##  8 2018-01-01 00:40:44 Mooniac      @fossilosophy Thought #rstats mi~     1
+##  9 2018-01-01 00:41:42 fossilosophy @Mooniac I think it&amp;#39;s a smallish~     1
+## 10 2018-01-01 00:42:26 DaveQuartey  &amp;quot;In no order: Partipated in Hack~     1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For cleaning the text of the tweets, I leaned heavily on &lt;a href=&#34;https://www.tidytextmining.com/twitter.html&#34;&gt;Julia Silge’s TidyText&lt;/a&gt;. This is an amazing resource and one I imagine I’ll continue to reference going forward.&lt;/p&gt;
+&lt;p&gt;After some trial and error, I decided to remove certain words because they overwhelmed my plot (I realized after the fact that there are probably better ways around this issue than just removing them, but I’ll save that for next time). Removing “#rstats” made sense initially, but then I decided to remove the rest of the words in the final filter argument below. This was not at all scientific, and is any area to improve going forward.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;remove_reg &amp;lt;- &amp;quot;&amp;amp;amp;|&amp;amp;lt;|&amp;amp;gt;&amp;quot;
+
+tidy_tweets &amp;lt;- tweets_simple %&amp;gt;% 
+  filter(!str_detect(text, &amp;quot;^RT&amp;quot;)) %&amp;gt;%
+  mutate(text = str_remove_all(text, remove_reg)) %&amp;gt;%
+  unnest_tokens(word, text, token = &amp;quot;tweets&amp;quot;) %&amp;gt;%
+  filter(!word %in% stop_words$word,
+         !word %in% str_remove_all(stop_words$word, &amp;quot;&amp;#39;&amp;quot;),
+         str_detect(word, &amp;quot;[a-z]&amp;quot;),
+         !word %in% c(&amp;quot;#rstats&amp;quot;, &amp;quot;#datascience&amp;quot;, &amp;quot;data&amp;quot;, &amp;quot;#tidyverse&amp;quot;, &amp;quot;package&amp;quot;, 
+                      &amp;quot;cran&amp;quot;,&amp;quot;#bigdata&amp;quot;, &amp;quot;#python&amp;quot;, &amp;quot;#machinelearning&amp;quot;, &amp;quot;#dataviz&amp;quot;,
+                      &amp;quot;#analytics&amp;quot;, &amp;quot;code&amp;quot;))
+
+head(tidy_tweets, n = 10)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 4
+##    created_at          screen_name   week word                   
+##    &amp;lt;dttm&amp;gt;              &amp;lt;chr&amp;gt;        &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;                  
+##  1 2018-01-01 00:04:21 Cruz_Julian_     1 rbloggers              
+##  2 2018-01-01 00:04:21 Cruz_Julian_     1 science                
+##  3 2018-01-01 00:04:21 Cruz_Julian_     1 courses                
+##  4 2018-01-01 00:04:21 Cruz_Julian_     1 udemy                  
+##  5 2018-01-01 00:04:21 Cruz_Julian_     1 sale                   
+##  6 2018-01-01 00:04:21 Cruz_Julian_     1 https://t.co/lqtzzxkkuy
+##  7 2018-01-01 00:08:03 d_olivaw         1 warning                
+##  8 2018-01-01 00:08:03 d_olivaw         1 notes                  
+##  9 2018-01-01 00:08:03 d_olivaw         1 treat                  
+## 10 2018-01-01 00:08:03 d_olivaw         1 s3&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I decided to only to plot the top 3 topics of conversation per week from 2018, and only label &lt;em&gt;unique&lt;/em&gt; topics to help keep the plot a bit cleaner.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;weekly_topics &amp;lt;- tidy_tweets %&amp;gt;%
+  select(week, word) %&amp;gt;%
+  count(week, word) %&amp;gt;%
+  group_by(week) %&amp;gt;%
+  top_n(n = 3, wt = n) %&amp;gt;%
+  mutate(rank = order(order(n, decreasing=TRUE)))
+  
+weekly_topics$unique &amp;lt;- duplicated(weekly_topics$word) | duplicated(weekly_topics$word, fromLast = TRUE)
+
+
+top_n(weekly_topics, 10)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 159 x 5
+## # Groups:   week [51]
+##     week word              n  rank unique
+##    &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;         &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;lgl&amp;gt; 
+##  1     1 #ai              83     1 TRUE  
+##  2     1 #iot             75     3 TRUE  
+##  3     1 #tech            76     2 TRUE  
+##  4     2 #iot             94     1 TRUE  
+##  5     2 #tech            91     3 TRUE  
+##  6     2 rbloggers        94     2 TRUE  
+##  7     3 rbloggers        91     1 TRUE  
+##  8     3 updates          84     2 TRUE  
+##  9     3 version          83     3 TRUE  
+## 10     4 #deeplearning    93     3 FALSE 
+## # ... with 149 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Plot&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;weekly_topics %&amp;gt;%
+  ggplot(aes(week, n)) +
+  geom_jitter() +
+  geom_text(aes(label=ifelse(unique == FALSE, as.character(word),&amp;#39;&amp;#39;), 
+                hjust=-0.2, vjust=0.1), color=&amp;quot;red&amp;quot;, size = 3.5, 
+            check_overlap = FALSE) +
+  labs(x = &amp;quot;Week&amp;quot;, y = &amp;quot;Frequency of Word&amp;quot;, title = &amp;quot;2018 Most Tweeted Topics in 
+       #rstats Tweets&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-01-04-rstats-tweets_files/figure-html/topics%20plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This isn’t the prettiest graph in the world, but it accomplishes what I set out to do by highlighting a few time-specific events, like the #rstudioconf and the useR! 2018 conference. This was a solid introduction to working with Twitter data, and gave me plenty of ideas on how to improve my analysis going forward. Success!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;resources&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Resources&lt;/h3&gt;
+&lt;p&gt;I wanted to highlight and link to a couple of the resources I used while working on this. These helped generate some ideas and get through a couple of the trickier spots.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.tidytextmining.com/twitter.html&#34;&gt;Julia Silge and David Robinson’s Text Mining with R&lt;/a&gt; - an amazing and FREE resource that walks through a tidy approach to text mining in R. Unbelievably helpful with 3 case study examples, including one that analyzes Twitter archives. Could not have done this analysis without this as a guide.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/32150213/test-if-a-value-is-unique-in-a-vector-in-r&#34;&gt;Stack Overflow - Test if a value is unique in a vector in R&lt;/a&gt; - when I realized I wanted to highlight only unique labels, I need this to figure out how to identify the unique values in weekly_topics$word.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>2019 Reading List</title>
+      <link>/post/reading-list/2019/</link>
+      <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/reading-list/2019/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Currently Reading:&lt;/strong&gt; The Startup of You by Reid Hoffman &amp;amp; The Revolt of the Public and the Crisis of Authority in the New Millennium&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>#TidyTuesday Week 37: NYC Restaurant Inspections</title>
       <link>/post/tidytuesday-nycrestaurants/</link>
       <pubDate>Mon, 17 Dec 2018 00:00:00 +0000</pubDate>
@@ -54,12 +189,12 @@ theme_set(theme_light())&lt;/code&gt;&lt;/pre&gt;
 ##       camis dba       inspection_date violation_code
 ##       &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;     &amp;lt;date&amp;gt;          &amp;lt;chr&amp;gt;         
 ##  1 41006043 12 CHAIRS 2015-12-17      02B           
-##  2 41006043 12 CHAIRS 2015-12-17      10F           
-##  3 41006043 12 CHAIRS 2015-12-17      05D           
-##  4 41006043 12 CHAIRS 2015-12-17      02G           
-##  5 41006043 12 CHAIRS 2015-12-17      10B           
-##  6 41006043 12 CHAIRS 2015-12-17      04J           
-##  7 41006043 12 CHAIRS 2015-12-17      06C           
+##  2 41006043 12 CHAIRS 2015-12-17      04J           
+##  3 41006043 12 CHAIRS 2015-12-17      10B           
+##  4 41006043 12 CHAIRS 2015-12-17      05D           
+##  5 41006043 12 CHAIRS 2015-12-17      06C           
+##  6 41006043 12 CHAIRS 2015-12-17      02G           
+##  7 41006043 12 CHAIRS 2015-12-17      10F           
 ##  8 41006043 12 CHAIRS 2016-01-12      10F           
 ##  9 41006043 12 CHAIRS 2016-01-12      06C           
 ## 10 41006043 12 CHAIRS 2016-06-21      02H           
@@ -105,21 +240,21 @@ top_critical_cuisine&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 15 x 5
 ##    cuisine_description violations critical non_critical percent_critical
 ##    &amp;lt;chr&amp;gt;                    &amp;lt;int&amp;gt;    &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
-##  1 Indian                    6466    3781.        2685.            0.585
-##  2 Chinese                  40080   23292.       16788.            0.581
-##  3 Korean                    5243    3041.        2202.            0.580
-##  4 Pizza/Italian             8295    4810.        3485.            0.580
-##  5 Delicatessen              6012    3478.        2534.            0.579
-##  6 Asian                     6306    3645.        2661.            0.578
-##  7 Spanish                  11595    6692.        4903.            0.577
-##  8 Thai                      5103    2941.        2162.            0.576
-##  9 Japanese                 13682    7861.        5821.            0.575
-## 10 Latin                    17082    9762.        7320.            0.571
-## 11 Bakery                   11812    6654.        5158.            0.563
-## 12 Italian                  15914    8880.        7034.            0.558
-## 13 Mexican                  15536    8612.        6924.            0.554
-## 14 Jewish/Kosher             5546    3055.        2491.            0.551
-## 15 Pizza                    17512    9582.        7930.            0.547&lt;/code&gt;&lt;/pre&gt;
+##  1 Indian                    6382     3732         2650            0.585
+##  2 Chinese                  39733    23066        16667            0.581
+##  3 Korean                    5228     3027         2201            0.579
+##  4 Pizza/Italian             8340     4829         3511            0.579
+##  5 Asian                     6230     3599         2631            0.578
+##  6 Spanish                  11490     6631         4859            0.577
+##  7 Delicatessen              6059     3488         2571            0.576
+##  8 Thai                      5081     2924         2157            0.575
+##  9 Japanese                 13554     7782         5772            0.574
+## 10 Latin                    16850     9623         7227            0.571
+## 11 Bakery                   11798     6644         5154            0.563
+## 12 Italian                  15990     8925         7065            0.558
+## 13 Jewish/Kosher             5587     3086         2501            0.552
+## 14 Mexican                  15420     8515         6905            0.552
+## 15 Pizza                    17282     9445         7837            0.547&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To generate the plot I wanted, I had to gather the data, as shown below. The last two steps - creating &lt;code&gt;cuisine_gather_totals&lt;/code&gt; and left joining with &lt;code&gt;cuisine_gather&lt;/code&gt;, was completed after I had made the initial plot. I realized I needed the percentage of critical violations in a different format than &lt;code&gt;cuisine_gather&lt;/code&gt; provided.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cuisine_gather &amp;lt;- top_critical_cuisine %&amp;gt;%
   select(cuisine_description, critical, non_critical) %&amp;gt;%
@@ -158,7 +293,7 @@ cuisine_gather_join %&amp;gt;%
 &lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/26079137/ggplot-use-numeric-values-to-fill-stacked-bar-charts&#34;&gt;Stack Overflow - “ggplot - use numeric values to fill stacked bar charts”&lt;/a&gt;: Needed this to figure out how to divide the columns in the bar chart up proportionally by critical/non-critical violations.&lt;br /&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/44724580/in-rs-ggplot2-how-to-add-percentage-labels-to-a-stacked-barplot-with-percenta&#34;&gt;Stack Overflow - “In R’s ggplot2, how to add percentage labels to a stacked barplot, with percentage values taken from separate columns?”&lt;/a&gt;: Needed this to label the columns with the percentages.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gitlab.com/tidy_tuesday/Week_37&#34;&gt;Dave Bloom’s TidyTuesday plot&lt;/a&gt;: I just really liked this random guy’s theme, then I also borrowed from his code to recode “Latin” in the cuisine_description.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/tidy_tuesday/Week_37&#34;&gt;Dave Bloom’s TidyTuesday plot&lt;/a&gt;: I was scrolling through #TidyTuesday on Twitter, I just really liked his custom theme. I also borrowed from his code to recode “Latin” in the cuisine_description.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
@@ -222,7 +357,7 @@ cuisine_gather_join %&amp;gt;%
 library(lubridate)
 
 
-medium &amp;lt;- read_csv(&amp;quot;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018-12-04/medium_datasci.csv&amp;quot;)
+medium &amp;lt;- read_csv(&amp;quot;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-12-04/medium_datasci.csv&amp;quot;)
 
 theme_set(theme_light())&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -411,8 +546,10 @@ author_by_day %&amp;gt;%
 &lt;li&gt;Black Panther: A Nation Under Our Feet Book 1 by Ta-Nehisi Coates&lt;br /&gt;
 &lt;/li&gt;
 &lt;li&gt;Open: An Autobiography by Andre Agassi&lt;/li&gt;
+&lt;li&gt;The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers by Ben Horowitz&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Bad Blood: Secrets &amp;amp; Lies in a Silicon Valley Startup by John Carreyrou&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;Currently Reading:&lt;/strong&gt; The Start-up of You by Reid Hoffman &amp;amp; The Hard Thing About Hard Things by Ben Horowitz&lt;/p&gt;
 </description>
     </item>
     

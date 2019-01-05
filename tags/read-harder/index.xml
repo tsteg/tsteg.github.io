@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Read Harder on Anecdotal Evidence</title>
+    <link>/tags/read-harder/</link>
+    <description>Recent content in Read Harder on Anecdotal Evidence</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 Tim Steggall.</copyright>
+    <lastBuildDate>Fri, 04 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/read-harder/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2019 Reading List</title>
+      <link>/post/reading-list/2019/</link>
+      <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/reading-list/2019/</guid>
+      <description>Currently Reading: The Startup of You by Reid Hoffman &amp;amp; The Revolt of the Public and the Crisis of Authority in the New Millennium</description>
+    </item>
+    
+    <item>
+      <title>2018 Reading List</title>
+      <link>/post/reading-list/</link>
+      <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/reading-list/</guid>
+      <description>The Three-Body Problem by Cixin Liu, trans. by Ken LiuShoe Dog: A Memoir by the Creator of Nike by Phil KnightKillers of the Flower Moon: The Osage Murders and the Birth of the FBI by David GrannGnomon by Nick HarkawayThe Ocean at the End of the Lane by Neil GaimanThe Catcher in the Rye by J.D. SalingerSiddhartha by Herman Hesse
+The Ministry of Utmost Happiness by Arundhati Roy</description>
+    </item>
+    
+  </channel>
+</rss>

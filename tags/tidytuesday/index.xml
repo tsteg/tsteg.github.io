@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Anecdotal Evidence</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on Anecdotal Evidence</description>
+    <title>#TidyTuesday on Anecdotal Evidence</title>
+    <link>/tags/tidytuesday/</link>
+    <description>Recent content in #TidyTuesday on Anecdotal Evidence</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Tim Steggall.</copyright>
     <lastBuildDate>Fri, 04 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/tidytuesday/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -23,15 +23,6 @@ I wanted to plot the most popular topics (as measured by word/token frequency) c
     </item>
     
     <item>
-      <title>2019 Reading List</title>
-      <link>/post/reading-list/2019/</link>
-      <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/reading-list/2019/</guid>
-      <description>Currently Reading: The Startup of You by Reid Hoffman &amp;amp; The Revolt of the Public and the Crisis of Authority in the New Millennium</description>
-    </item>
-    
-    <item>
       <title>#TidyTuesday Week 37: NYC Restaurant Inspections</title>
       <link>/post/tidytuesday-nycrestaurants/</link>
       <pubDate>Mon, 17 Dec 2018 00:00:00 +0000</pubDate>
@@ -42,49 +33,12 @@ In the NYC Restaurant Inspections data each row is a unique inspection/violation
     </item>
     
     <item>
-      <title>The Color of Law by Richard Rothstein</title>
-      <link>/post/color-of-law/</link>
-      <pubDate>Wed, 12 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/color-of-law/</guid>
-      <description>The Color of Law starts by presenting a series of Supreme Court decisions that cemented and popularized the myth of de facto segregation, not just in American jurisprudence, but in our culture. Rothstein points to opinions from Justice Potter Stewart in 1974, Justice Anthony Kennedy in 1992, and finishes with this quote from a Chief Justice John Roberts in 2007: “Where [racial imbalance] is a product not of state action but of private choices, it does not have constitutional implications.</description>
-    </item>
-    
-    <item>
       <title>#TidyTuesday Week 36: Medium Blog Posts</title>
       <link>/post/tidy-tuesday-medium/</link>
       <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/tidy-tuesday-medium/</guid>
       <description>So my first attempt at a #TidyTuesday - it’s not quite as easy as DRob makes it look! The data on Medium blog posts was interesting and in good shape, but for my first #TidyTuesday post I had a bit of a brain cramp generating ideas. I’ve been listening to a podcast lately that talks about the importance of a consistent posting schedule for bloggers, so I tried to dig into the relationship between an author’s posting schedule and the number of claps they receive.</description>
-    </item>
-    
-    <item>
-      <title>2017 Reading List</title>
-      <link>/post/2017-book-list/</link>
-      <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2017-book-list/</guid>
-      <description>Strangers in Their Own Land by Arlie Russell Hochschild
-The Undoing Project by Michael Lewis
-What it Takes by Richard Ben Cramer
-Midnight Riot by Ben Aaronovitch
-Just Mercy by Bryan Stevenson
-Moon Over Soho by Ben Aaronovitch
-Data Science for Business by Foster Provost and Tom Fawcett
-The Unwinding by George Packer
-Whispers Underground by Ben Aaronovitch
-Hillbilly Elegy by J.</description>
-    </item>
-    
-    <item>
-      <title>2018 Reading List</title>
-      <link>/post/reading-list/</link>
-      <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/reading-list/</guid>
-      <description>The Three-Body Problem by Cixin Liu, trans. by Ken LiuShoe Dog: A Memoir by the Creator of Nike by Phil KnightKillers of the Flower Moon: The Osage Murders and the Birth of the FBI by David GrannGnomon by Nick HarkawayThe Ocean at the End of the Lane by Neil GaimanThe Catcher in the Rye by J.D. SalingerSiddhartha by Herman Hesse
-The Ministry of Utmost Happiness by Arundhati Roy</description>
     </item>
     
   </channel>

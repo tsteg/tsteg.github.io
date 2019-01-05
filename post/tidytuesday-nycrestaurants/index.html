@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.33" />
+  <meta name="generator" content="Hugo 0.44" />
   <meta name="author" content="Tim Steggall">
 
   
@@ -242,6 +242,14 @@ In the NYC Restaurant Inspections data each row is a unique inspection/violation
               </a>
             </li>
             
+            <li class="nav-item">
+              <a href="/post/reading-list/2019">
+                
+                <span>2019</span>
+                
+              </a>
+            </li>
+            
           </ul>
         </li>
 
@@ -389,12 +397,12 @@ theme_set(theme_light())</code></pre>
 ##       camis dba       inspection_date violation_code
 ##       &lt;int&gt; &lt;chr&gt;     &lt;date&gt;          &lt;chr&gt;         
 ##  1 41006043 12 CHAIRS 2015-12-17      02B           
-##  2 41006043 12 CHAIRS 2015-12-17      10F           
-##  3 41006043 12 CHAIRS 2015-12-17      05D           
-##  4 41006043 12 CHAIRS 2015-12-17      02G           
-##  5 41006043 12 CHAIRS 2015-12-17      10B           
-##  6 41006043 12 CHAIRS 2015-12-17      04J           
-##  7 41006043 12 CHAIRS 2015-12-17      06C           
+##  2 41006043 12 CHAIRS 2015-12-17      04J           
+##  3 41006043 12 CHAIRS 2015-12-17      10B           
+##  4 41006043 12 CHAIRS 2015-12-17      05D           
+##  5 41006043 12 CHAIRS 2015-12-17      06C           
+##  6 41006043 12 CHAIRS 2015-12-17      02G           
+##  7 41006043 12 CHAIRS 2015-12-17      10F           
 ##  8 41006043 12 CHAIRS 2016-01-12      10F           
 ##  9 41006043 12 CHAIRS 2016-01-12      06C           
 ## 10 41006043 12 CHAIRS 2016-06-21      02H           
@@ -440,21 +448,21 @@ top_critical_cuisine</code></pre>
 <pre><code>## # A tibble: 15 x 5
 ##    cuisine_description violations critical non_critical percent_critical
 ##    &lt;chr&gt;                    &lt;int&gt;    &lt;dbl&gt;        &lt;dbl&gt;            &lt;dbl&gt;
-##  1 Indian                    6466    3781.        2685.            0.585
-##  2 Chinese                  40080   23292.       16788.            0.581
-##  3 Korean                    5243    3041.        2202.            0.580
-##  4 Pizza/Italian             8295    4810.        3485.            0.580
-##  5 Delicatessen              6012    3478.        2534.            0.579
-##  6 Asian                     6306    3645.        2661.            0.578
-##  7 Spanish                  11595    6692.        4903.            0.577
-##  8 Thai                      5103    2941.        2162.            0.576
-##  9 Japanese                 13682    7861.        5821.            0.575
-## 10 Latin                    17082    9762.        7320.            0.571
-## 11 Bakery                   11812    6654.        5158.            0.563
-## 12 Italian                  15914    8880.        7034.            0.558
-## 13 Mexican                  15536    8612.        6924.            0.554
-## 14 Jewish/Kosher             5546    3055.        2491.            0.551
-## 15 Pizza                    17512    9582.        7930.            0.547</code></pre>
+##  1 Indian                    6382     3732         2650            0.585
+##  2 Chinese                  39733    23066        16667            0.581
+##  3 Korean                    5228     3027         2201            0.579
+##  4 Pizza/Italian             8340     4829         3511            0.579
+##  5 Asian                     6230     3599         2631            0.578
+##  6 Spanish                  11490     6631         4859            0.577
+##  7 Delicatessen              6059     3488         2571            0.576
+##  8 Thai                      5081     2924         2157            0.575
+##  9 Japanese                 13554     7782         5772            0.574
+## 10 Latin                    16850     9623         7227            0.571
+## 11 Bakery                   11798     6644         5154            0.563
+## 12 Italian                  15990     8925         7065            0.558
+## 13 Jewish/Kosher             5587     3086         2501            0.552
+## 14 Mexican                  15420     8515         6905            0.552
+## 15 Pizza                    17282     9445         7837            0.547</code></pre>
 <p>To generate the plot I wanted, I had to gather the data, as shown below. The last two steps - creating <code>cuisine_gather_totals</code> and left joining with <code>cuisine_gather</code>, was completed after I had made the initial plot. I realized I needed the percentage of critical violations in a different format than <code>cuisine_gather</code> provided.</p>
 <pre class="r"><code>cuisine_gather &lt;- top_critical_cuisine %&gt;%
   select(cuisine_description, critical, non_critical) %&gt;%
@@ -493,7 +501,7 @@ cuisine_gather_join %&gt;%
 <li><a href="https://stackoverflow.com/questions/26079137/ggplot-use-numeric-values-to-fill-stacked-bar-charts">Stack Overflow - “ggplot - use numeric values to fill stacked bar charts”</a>: Needed this to figure out how to divide the columns in the bar chart up proportionally by critical/non-critical violations.<br />
 </li>
 <li><a href="https://stackoverflow.com/questions/44724580/in-rs-ggplot2-how-to-add-percentage-labels-to-a-stacked-barplot-with-percenta">Stack Overflow - “In R’s ggplot2, how to add percentage labels to a stacked barplot, with percentage values taken from separate columns?”</a>: Needed this to label the columns with the percentages.</li>
-<li><a href="https://gitlab.com/tidy_tuesday/Week_37">Dave Bloom’s TidyTuesday plot</a>: I just really liked this random guy’s theme, then I also borrowed from his code to recode “Latin” in the cuisine_description.</li>
+<li><a href="https://gitlab.com/tidy_tuesday/Week_37">Dave Bloom’s TidyTuesday plot</a>: I was scrolling through #TidyTuesday on Twitter, I just really liked his custom theme. I also borrowed from his code to recode “Latin” in the cuisine_description.</li>
 </ul>
 </div>
 

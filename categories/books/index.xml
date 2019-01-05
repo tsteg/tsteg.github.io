@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Anecdotal Evidence</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on Anecdotal Evidence</description>
+    <title>Books on Anecdotal Evidence</title>
+    <link>/categories/books/</link>
+    <description>Recent content in Books on Anecdotal Evidence</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Tim Steggall.</copyright>
     <lastBuildDate>Fri, 04 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/books/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>#TidyTuesday 2019 Week 1: #Rstats Tweets</title>
-      <link>/post/rstats-tweets/</link>
-      <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/rstats-tweets/</guid>
-      <description>Happy New Year! This first TidyTuesday dataset of 2019 was a great way to get the year started. I’ve been working on a separate side project that will include analyzing social media trends, so I thought this would be a good opportunity to test out at least one rough idea I’ve been kicking around.
-I wanted to plot the most popular topics (as measured by word/token frequency) chronologically, to see if any particular keywords were unique to certain timeframes, and/or their frequency of use stood out.</description>
-    </item>
     
     <item>
       <title>2019 Reading List</title>
@@ -32,31 +22,12 @@ I wanted to plot the most popular topics (as measured by word/token frequency) c
     </item>
     
     <item>
-      <title>#TidyTuesday Week 37: NYC Restaurant Inspections</title>
-      <link>/post/tidytuesday-nycrestaurants/</link>
-      <pubDate>Mon, 17 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/tidytuesday-nycrestaurants/</guid>
-      <description>Week 2! Again, I found the most difficult part of this process to be diving into a random set of data and trying to pull out something interesting. Toss me some baseball or political data, and I have an idea of the questions I want to ask, but data on NYC restaurant inspections is a little trickier.
-In the NYC Restaurant Inspections data each row is a unique inspection/violation - so one restaurant may have multiple records from the same date, but with different violations.</description>
-    </item>
-    
-    <item>
       <title>The Color of Law by Richard Rothstein</title>
       <link>/post/color-of-law/</link>
       <pubDate>Wed, 12 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/color-of-law/</guid>
       <description>The Color of Law starts by presenting a series of Supreme Court decisions that cemented and popularized the myth of de facto segregation, not just in American jurisprudence, but in our culture. Rothstein points to opinions from Justice Potter Stewart in 1974, Justice Anthony Kennedy in 1992, and finishes with this quote from a Chief Justice John Roberts in 2007: “Where [racial imbalance] is a product not of state action but of private choices, it does not have constitutional implications.</description>
-    </item>
-    
-    <item>
-      <title>#TidyTuesday Week 36: Medium Blog Posts</title>
-      <link>/post/tidy-tuesday-medium/</link>
-      <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/tidy-tuesday-medium/</guid>
-      <description>So my first attempt at a #TidyTuesday - it’s not quite as easy as DRob makes it look! The data on Medium blog posts was interesting and in good shape, but for my first #TidyTuesday post I had a bit of a brain cramp generating ideas. I’ve been listening to a podcast lately that talks about the importance of a consistent posting schedule for bloggers, so I tried to dig into the relationship between an author’s posting schedule and the number of claps they receive.</description>
     </item>
     
     <item>
