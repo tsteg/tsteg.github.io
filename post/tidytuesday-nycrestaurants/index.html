@@ -393,20 +393,20 @@ theme_set(theme_light())</code></pre>
   filter(dba == &quot;12 CHAIRS&quot;) %&gt;%
   select(camis, dba, inspection_date, violation_code) %&gt;%
   arrange(inspection_date)</code></pre>
-<pre><code>## # A tibble: 35 x 4
+<pre><code>## # A tibble: 34 x 4
 ##       camis dba       inspection_date violation_code
-##       &lt;int&gt; &lt;chr&gt;     &lt;date&gt;          &lt;chr&gt;         
-##  1 41006043 12 CHAIRS 2015-12-17      02B           
-##  2 41006043 12 CHAIRS 2015-12-17      04J           
-##  3 41006043 12 CHAIRS 2015-12-17      10B           
-##  4 41006043 12 CHAIRS 2015-12-17      05D           
-##  5 41006043 12 CHAIRS 2015-12-17      06C           
-##  6 41006043 12 CHAIRS 2015-12-17      02G           
-##  7 41006043 12 CHAIRS 2015-12-17      10F           
-##  8 41006043 12 CHAIRS 2016-01-12      10F           
-##  9 41006043 12 CHAIRS 2016-01-12      06C           
-## 10 41006043 12 CHAIRS 2016-06-21      02H           
-## # ... with 25 more rows</code></pre>
+##       &lt;dbl&gt; &lt;chr&gt;     &lt;date&gt;          &lt;chr&gt;         
+##  1 41006043 12 CHAIRS 2016-06-21      02H           
+##  2 41006043 12 CHAIRS 2016-06-21      05F           
+##  3 41006043 12 CHAIRS 2016-06-21      02G           
+##  4 41006043 12 CHAIRS 2016-06-21      04J           
+##  5 41006043 12 CHAIRS 2016-06-22      10B           
+##  6 41006043 12 CHAIRS 2016-07-21      10F           
+##  7 41006043 12 CHAIRS 2016-07-21      06D           
+##  8 41006043 12 CHAIRS 2016-07-21      06C           
+##  9 41006043 12 CHAIRS 2017-03-02      06C           
+## 10 41006043 12 CHAIRS 2017-03-02      02G           
+## # ... with 24 more rows</code></pre>
 <p>I needed the actual number of inspections, and not the number of <strong>violations</strong>.</p>
 <pre class="r"><code>inspections &lt;- restaurants %&gt;%
   select(camis, dba, boro, inspection_date) %&gt;%
@@ -448,21 +448,21 @@ top_critical_cuisine</code></pre>
 <pre><code>## # A tibble: 15 x 5
 ##    cuisine_description violations critical non_critical percent_critical
 ##    &lt;chr&gt;                    &lt;int&gt;    &lt;dbl&gt;        &lt;dbl&gt;            &lt;dbl&gt;
-##  1 Indian                    6382     3732         2650            0.585
-##  2 Chinese                  39733    23066        16667            0.581
-##  3 Korean                    5228     3027         2201            0.579
-##  4 Pizza/Italian             8340     4829         3511            0.579
-##  5 Asian                     6230     3599         2631            0.578
-##  6 Spanish                  11490     6631         4859            0.577
-##  7 Delicatessen              6059     3488         2571            0.576
-##  8 Thai                      5081     2924         2157            0.575
-##  9 Japanese                 13554     7782         5772            0.574
-## 10 Latin                    16850     9623         7227            0.571
-## 11 Bakery                   11798     6644         5154            0.563
-## 12 Italian                  15990     8925         7065            0.558
-## 13 Jewish/Kosher             5587     3086         2501            0.552
-## 14 Mexican                  15420     8515         6905            0.552
-## 15 Pizza                    17282     9445         7837            0.547</code></pre>
+##  1 Indian                    6463     3772         2691            0.584
+##  2 Pizza/Italian             8358     4851         3507            0.580
+##  3 Chinese                  39911    23122        16789            0.579
+##  4 Asian                     6200     3584         2616            0.578
+##  5 Spanish                  11584     6697         4887            0.578
+##  6 Delicatessen              6035     3479         2556            0.576
+##  7 Korean                    5316     3064         2252            0.576
+##  8 Japanese                 13606     7794         5812            0.573
+##  9 Thai                      5106     2922         2184            0.572
+## 10 Latin                    16790     9590         7200            0.571
+## 11 Bakery                   11799     6628         5171            0.562
+## 12 Italian                  15982     8911         7071            0.558
+## 13 Jewish/Kosher             5590     3103         2487            0.555
+## 14 Mexican                  15377     8472         6905            0.551
+## 15 Pizza                    17252     9404         7848            0.545</code></pre>
 <p>To generate the plot I wanted, I had to gather the data, as shown below. The last two steps - creating <code>cuisine_gather_totals</code> and left joining with <code>cuisine_gather</code>, was completed after I had made the initial plot. I realized I needed the percentage of critical violations in a different format than <code>cuisine_gather</code> provided.</p>
 <pre class="r"><code>cuisine_gather &lt;- top_critical_cuisine %&gt;%
   select(cuisine_description, critical, non_critical) %&gt;%

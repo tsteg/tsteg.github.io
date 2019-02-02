@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Tim Steggall.</copyright>
-    <lastBuildDate>Fri, 04 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>#TidyTuesday 2019 Week 4: CA Incarceration Data</title>
+      <link>/post/ca-incarceration/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ca-incarceration/</guid>
+      <description>I’m a little late to this one, but I didn’t want to miss the chance to check out this incarceration data from the Vera Institute, particularly as it pertains to California.
+I decided to follow two threads:
+Use Leaflet to visualize the incarceration rates in CA by countyExplore how the total_jail_pretrial numbers have changed over timeSetuplibrary(tidyverse)library(lubridate)library(leaflet)library(viridis)theme_set(theme_light())incarceration_raw &amp;lt;- read_csv(&amp;quot;https://raw.</description>
+    </item>
     
     <item>
       <title>#TidyTuesday 2019 Week 1: #Rstats Tweets</title>
@@ -28,7 +39,7 @@ I wanted to plot the most popular topics (as measured by word/token frequency) c
       <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/reading-list/2019/</guid>
-      <description>Currently Reading: The Startup of You by Reid Hoffman &amp;amp; The Revolt of the Public and the Crisis of Authority in the New Millennium</description>
+      <description>The Revolt of the Public and the Crisis of Authority in the New Millennium by Martin GurriFriday Black by Nana Kwame Adjei-BrenyahThe Trespasser by Tana FrenchThe Underground Railroad by Colson WhiteheadCurrently Reading: Essentialism by Greg McKeown</description>
     </item>
     
     <item>
